@@ -33,8 +33,8 @@ public class FTPController {
 
     @PostMapping("/uploadFile")
     public ResponseEntity<?> uploadFile(@RequestPart(value = "dto") FTPFileUploadRequestDTO dto,
-                                               @RequestPart(value = "files", required = false) MultipartFile[] files,
-                                               HttpServletRequest request) {
+                                        @RequestPart(value = "files", required = false) MultipartFile[] files,
+                                        HttpServletRequest request) {
 
         if(files == null || files.length == 0) {
             throw new BadReqeustException("파일을 선택해주세요.");
