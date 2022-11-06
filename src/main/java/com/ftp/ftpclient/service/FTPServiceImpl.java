@@ -54,6 +54,8 @@ public class FTPServiceImpl implements FTPService {
             logger.error("ftp connect failed : {}", e.getMessage());
             throw new FTPException(FTP_USER_NOT_FOUND);
         }
+
+        ftpClient.enterLocalActiveMode();
     }
 
     @Override

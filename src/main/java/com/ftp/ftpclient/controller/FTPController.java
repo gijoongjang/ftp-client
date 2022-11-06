@@ -28,8 +28,8 @@ import static com.ftp.ftpclient.exception.ErrorCode.*;
 @RequiredArgsConstructor
 @RequestMapping("FTP")
 public class FTPController {
-    private final FTPService ftpService;
     private final Logger logger = LoggerFactory.getLogger(FTPController.class);
+    private final FTPService ftpService;
 
     @PostMapping("/uploadFile")
     public ResponseEntity<?> uploadFile(@RequestPart(value = "dto") FTPFileUploadRequestDTO dto,
