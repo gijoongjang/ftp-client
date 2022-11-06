@@ -29,8 +29,8 @@ axios({
     data:{
       filePath: '/A/B/C/',
       fileName: 'D.pdf'
-    }
-    responseType:'blob'
+    },
+    responseType:'blob',
     headers: {'Accept': 'application/octet-stream'}
 })
 .then(response => {
